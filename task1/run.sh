@@ -8,6 +8,6 @@ mkdir $cppath
 
 find $1 -name *.$ext -exec cp --backup=t {} ./$cppath \;
 
-tar -zcf $cppname ./$cppath
+tar -zcf $cpname ./$cppath
 
 echo "done"
