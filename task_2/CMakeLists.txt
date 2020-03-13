@@ -1,0 +1,15 @@
+cmake_minimum_required(VERSION 3.10)
+project(task2 LANGUAGES CXX)
+
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14")
+
+execute_process(COMMAND python3 preparing.py WORKING_DIRECTORY A)
+
+add_subdirectory(B)
+
+add_executable(C C/main.cpp)
+
+set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
+
+target_link_libraries(C library)
+target_include_directories(C PUBLIC "${CMAKE_CURRENT_LIST_DIR}")
