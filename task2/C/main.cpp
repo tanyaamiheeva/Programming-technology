@@ -1,9 +1,5 @@
 #include "main.h"
 
-void check_a() {
-    std::cout << 1;
-}
-
 void check_c() {
     std::cout << 1;
 }
