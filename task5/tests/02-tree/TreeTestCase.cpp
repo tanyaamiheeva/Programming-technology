@@ -23,9 +23,9 @@ class TreeTestCase : public ::testing::Test {
 void TreeTestCase::SetUp()
 {
     TreeTestCase::current_path = boost::filesystem::current_path().string();
-    path_for_test = current_path + "/testing";
-    create_directory(path_for_test);
-    std::ofstream file(path_for_test + "/test.txt");
+    TreeTestCase::path_for_test = TreeTestCase::current_path + "/testing";
+    create_directory(TreeTestCase::path_for_test);
+    std::ofstream file(TreeTestCase::path_for_test + "/test.txt");
     file << "still testing"; file.close();
 }
 
