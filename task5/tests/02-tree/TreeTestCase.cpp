@@ -28,6 +28,8 @@ void TreeTestCase::SetUp()
     std::ofstream file(TreeTestCase::path_for_test + "/test.txt");
     file << "still testing"; 
     file.close();
+    create_directory(TreeTestCase::test_path + "/test1");
+    create_directory(TreeTestCase::test_path + "/test2");
 }
 
 void TreeTestCase::TearDown()
