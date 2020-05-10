@@ -26,12 +26,13 @@ void TreeTestCase::SetUp()
     TreeTestCase::path_for_test = TreeTestCase::current_path + "/testing";
     create_directory(TreeTestCase::path_for_test);
     std::ofstream file(TreeTestCase::path_for_test + "/test.txt");
-    file << "still testing"; file.close();
+    file << "still testing"; 
+    file.close();
 }
 
 void TreeTestCase::TearDown()
 {
-    remove_all(path_for_test);
+    remove_all(TreeTestCase::path_for_test);
 }
 
 TEST_F(TreeTestCase, Equality)
