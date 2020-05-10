@@ -8,7 +8,5 @@
 #include <gtest/gtest.h>
 #include <boost/filesystem/path.hpp>
 
-class TreeTestCase : public ::testing::Test {
-};
 
 
